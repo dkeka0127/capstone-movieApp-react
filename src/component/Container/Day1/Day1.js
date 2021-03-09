@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import Example1 from '../Day1/Example1';
+import Example1 from './Example1';
+import Project1 from './Project1';
 
 function Day1(){
+
     return (
         <div>
             <Content>
                 <h1>Day1</h1>
                 <Example1 />
+                <Project1 />
             </Content>
         </div>
     )
