@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+
+// component 불러오기
+import Header from './component/Header/Header';
+
+import Day1 from './component/Container/Day1/Day1';
+import Day2 from './component/Container/Day2/Day2';
+
+import Footer from './component/Footer/Footer';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path='/day1' component={Day1} />
+        <Route exact path='/day2' component={Day2} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 
