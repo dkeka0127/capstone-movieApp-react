@@ -1,10 +1,17 @@
 import React, {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import axios from 'axios';
 
 // 각 영화의 정보를 출력해주는 정보 컴포넌트
 function Movie({movieInfo}){
     return(
+        <Link to={{
+            pathname: `/day1/movie-detail/${movieInfo.id}`,
+            state: {
+                movieInfo:movieInfo
+            }
+        }}>
         <MovieInfo>
              {/* 영화 포스터 component */}
             <MovieImg>
@@ -26,6 +33,7 @@ function Movie({movieInfo}){
                 <h5>rate: {movieInfo.rating}</h5>
             </MovieFont>
         </MovieInfo>
+        </Link>
     )
 }
 
