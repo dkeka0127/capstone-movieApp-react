@@ -6,7 +6,7 @@ function Header(){
         <div>
             <Content>
                 <Container>
-                    Header
+                    Movie Website made by React
                 </Container>
             </Content>
         </div>
@@ -17,6 +17,8 @@ function Header(){
 
 const Content = styled.div`
 width: 100%;
+color: white;
+background-color: #2f2f2f;
 `
 const Container = styled.div`
 box-sizing: border-box;
@@ -24,6 +26,7 @@ padding: 40px 30px;
 margin: 0px 100px;
 text-align: center;
 font-size: 30px;
+font-style: italic;
 border-bottom: 1px solid lightgray;
 `
 
